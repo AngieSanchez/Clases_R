@@ -1,0 +1,164 @@
+#Clase I ANALISIS DE DATOS BASICOS Y APLICADOS USANDO R
+
+##Línea de comandos como calculadora
+2+5 #7
+
+7-3 #4
+
+((2-3)+5)*3 #12
+
+12/2 #6
+
+2+5; 4+6 #Varias operaciones a la vez.
+
+##Otras funciones
+
+?Arithmetic #Ayuda
+
+sqrt(5) #Raiz cuadrada
+
+log(10) #Logartimo
+
+log10(20) #Log en base 10
+
+3^2 #Potencia
+
+3**2 #Potencia
+
+##Si es una función tiene (). Dentro los argumentos, que se separan con comas.
+
+LETTERS #Abecedario en mayúscula
+
+letters #Abecedario en minúscula.
+
+a <- 3*4 #Asignar la operación a un vector a.
+
+3*4 -> a #Otra forma de asignar
+
+a = 3*4 #Y otra forma de asignar.
+
+##Importante diferencia entre mayúsculas.
+
+a #Llamar un vector ya creado
+
+mode(a) #Nos dice qué tipo de vector es.
+
+class(a) #Otra forma de saber qué tipo de vector es.
+
+as.numeric(a) #Preguntar si el vector es numérico.
+
+rm(a) #Eliminar un vector determinado
+
+rm(list=ls(all=TRUE)) # Elimar todo lo que hay guardado en Environment.
+
+rm(list = ls()) #Otra forma de eliminar todo lo que hay en Environment.
+
+#Los vectores que tiene caracteres o boleanos, se llaman vectores atomicos.
+
+b <- "Hola Mundo!"
+
+class(b) # Vector tipo caracter
+
+c <- TRUE
+
+class(c) #Vector tipo lógico
+
+b==2 #Pregunta boleana de si b es igual a 2.
+
+b<=2 #Pregunta boleana de si b es menor que 2.
+
+b>=2 #Pregunta boleana de si b es mayor que 2.
+
+d <- c(1,2,3) # La c sirve para concatenar o unir varios elementos.
+
+e <- c(2, "a", FALSE)
+
+class(e) #Convierte todo el vector al tipo de datos más básico, o sea caracter.
+
+vec_void <- numeric(20) #Crea un vector vacío de longitud 20 tipo numérico
+
+vec_void_1 <- character(20) #Crea un vector vacío de longitud 20 tipo caracter
+
+####Ejercicio
+
+#1. cree un vector que contenga los números del 1 al 10.
+
+Forma_1 <- 1:10
+
+Forma_2 <- c(1,2,3,4,5,6,7,8,9,10)
+
+Forma_3 <- seq(from=1, to=10)
+
+#2. Cree un vector de longitud 1 a 6 cada 0.2
+seq (from=1, to=6, by=0.2) 
+
+#3. Cree un vector de 1 a 6 en 20 números
+
+seq (from=1, to=6, length.out=20)  
+
+#4. Cree un vector con las primeras 6 letras del abecedario
+
+let <- letters[1:6]
+
+##############################################################
+
+f<- c(17, 20, 1, 5, 9, 2, 21, 23, 24, 15)
+
+sort(f) #Ordena el vector en forma creciente
+
+sort(f, decreasing = TRUE) #Ordena el vector en forma decresiente.
+
+#Si se va a ordenar un data frame es con order()
+
+sum(f) #Suma todas las variables del vector
+
+mean(f) #Media de los números del vector
+
+quantile(f) #Calcula el quantile del vector
+
+length(f) #Me da la longitud del vector
+
+#################################################################
+
+names <- c("Manzanas", "Naranjas", "Pizzas")
+
+vec <- c(4, 7, 50)
+
+names(vec) <- names #Asigna etiquetas a un vector
+
+vec
+
+str(vec) #Estructura del vector
+
+summary(vec) #Los estadísticos básicos
+
+head(f) #Muestra los 6 primeros números del vector
+
+tail(f) #Muestra los 6 últimos números del vector
+
+#### Ejercicios
+
+# 1. Sumar los números enteros del 1 al 5
+v0 <- sum(1:5)
+
+#2. Crear un vector que contenga una letra
+
+v1 <- letters[20]
+
+#3. Copiar de v1 a v2
+
+v2 <- v1
+
+#4. Compare los valores de v1 y v2
+
+v1 == v2
+
+#5. Cree un vector de longitud 20 con el tipo de datos que ud quiera y muestre las primeras 9 entradas
+
+a <- 1:20
+
+a[1:9]
+
+#6. Crear un vector con las letras del abecedario cada 2.
+
+v1<- letters[seq(from=1, to=26, by=2)]
